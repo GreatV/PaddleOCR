@@ -78,6 +78,7 @@ class InferenceEngine(object):
                 self.input_tensor.copy_from_cpu(x)
                 self.predictor.run()
                 self.output_tensor.copy_to_cpu()
+                del x  # Cleanup to prevent memory leak
 
         self.post_process = get_post_processing(
             {

@@ -1,23 +1,8 @@
-// Copyright (c) 2020 PaddlePaddle Authors. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 #include <include/ocr_det.h>
 
 namespace PaddleOCR {
 
 void DBDetector::LoadModel(const std::string &model_dir) {
-  //   AnalysisConfig config;
   paddle_infer::Config config;
   config.SetModel(model_dir + "/inference.pdmodel",
                   model_dir + "/inference.pdiparams");
@@ -43,22 +28,16 @@ void DBDetector::LoadModel(const std::string &model_dir) {
     config.DisableGpu();
     if (this->use_mkldnn_) {
       config.EnableMKLDNN();
-      // cache 10 different shapes for mkldnn to avoid memory leak
       config.SetMkldnnCacheCapacity(10);
     } else {
       config.DisableMKLDNN();
     }
     config.SetCpuMathLibraryNumThreads(this->cpu_math_library_num_threads_);
   }
-  // use zero_copy_run as default
   config.SwitchUseFeedFetchOps(false);
-  // true for multiple input
   config.SwitchSpecifyInputNames(true);
-
   config.SwitchIrOptim(true);
-
   config.EnableMemoryOptim();
-  // config.DisableGlogInfo();
 
   this->predictor_ = paddle_infer::CreatePredictor(config);
 }
@@ -85,7 +64,6 @@ void DBDetector::Run(cv::Mat &img,
   this->permute_op_.Run(&resize_img, input.data());
   auto preprocess_end = std::chrono::steady_clock::now();
 
-  // Inference.
   auto input_names = this->predictor_->GetInputNames();
   auto input_t = this->predictor_->GetInputHandle(input_names[0]);
   input_t->Reshape({1, 3, resize_img.rows, resize_img.cols});
@@ -146,6 +124,12 @@ void DBDetector::Run(cv::Mat &img,
   std::chrono::duration<float> postprocess_diff =
       postprocess_end - postprocess_start;
   times.push_back(double(postprocess_diff.count() * 1000));
+
+  // Clear large vectors to prevent memory leaks
+  input.clear();
+  out_data.clear();
+  pred.clear();
+  cbuf.clear();
 }
 
 } // namespace PaddleOCR

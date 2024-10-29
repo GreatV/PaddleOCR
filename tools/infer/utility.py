@@ -311,6 +311,11 @@ def create_predictor(args, mode, logger):
             for name in input_names:
                 input_tensor = predictor.get_input_handle(name)
         output_tensors = get_output_tensors(args, mode, predictor)
+
+        # Cleanup to prevent memory leaks
+        del config
+        del input_names
+
         return predictor, input_tensor, output_tensors, config
 
 

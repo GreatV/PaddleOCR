@@ -1,17 +1,3 @@
-// Copyright (c) 2020 PaddlePaddle Authors. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 #include <include/args.h>
 #include <include/paddleocr.h>
 
@@ -105,6 +91,10 @@ std::vector<OCRPredictResult> PPOCR::ocr(cv::Mat img, bool det, bool rec,
   if (rec) {
     this->rec(img_list, ocr_result);
   }
+
+  // Properly delete objects to prevent memory leaks
+  img_list.clear();
+
   return ocr_result;
 }
 
@@ -124,6 +114,9 @@ void PPOCR::det(cv::Mat img, std::vector<OCRPredictResult> &ocr_results) {
   this->time_info_det[0] += det_times[0];
   this->time_info_det[1] += det_times[1];
   this->time_info_det[2] += det_times[2];
+
+  // Optimize memory usage
+  boxes.clear();
 }
 
 void PPOCR::rec(std::vector<cv::Mat> img_list,
@@ -140,6 +133,10 @@ void PPOCR::rec(std::vector<cv::Mat> img_list,
   this->time_info_rec[0] += rec_times[0];
   this->time_info_rec[1] += rec_times[1];
   this->time_info_rec[2] += rec_times[2];
+
+  // Optimize memory usage
+  rec_texts.clear();
+  rec_text_scores.clear();
 }
 
 void PPOCR::cls(std::vector<cv::Mat> img_list,

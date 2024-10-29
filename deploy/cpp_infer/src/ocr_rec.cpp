@@ -1,17 +1,3 @@
-// Copyright (c) 2020 PaddlePaddle Authors. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 #include <include/ocr_rec.h>
 
 namespace PaddleOCR {
@@ -123,6 +109,11 @@ void CRNNRecognizer::Run(std::vector<cv::Mat> img_list,
     }
     auto postprocess_end = std::chrono::steady_clock::now();
     postprocess_diff += postprocess_end - postprocess_start;
+
+    // Clear large vectors to prevent memory leaks
+    input.clear();
+    predict_batch.clear();
+    norm_img_batch.clear();
   }
   times.push_back(double(preprocess_diff.count() * 1000));
   times.push_back(double(inference_diff.count() * 1000));
@@ -146,6 +137,7 @@ void CRNNRecognizer::LoadModel(const std::string &model_dir) {
       if (this->precision_ == "int8") {
         precision = paddle_infer::Config::Precision::kInt8;
       }
+      config.EnableTensorRtEngine(1 << 30, 1, 20, precision, false, false);
       if (!Utility::PathExists("./trt_rec_shape.txt")) {
         config.CollectShapeRangeInfo("./trt_rec_shape.txt");
       } else {
