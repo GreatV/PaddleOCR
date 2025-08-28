@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../version2.x/static/images/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -39,39 +39,63 @@
   
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
   
@@ -82,21 +106,27 @@
   
   
     
-    
       
-    
+      
+        
+      
+      
     
   
     
-    
       
-    
+      
+        
+      
+      
     
   
     
-    
       
-    
+      
+        
+      
+      
     
   
   
@@ -1256,29 +1286,6 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../deployment/python_and_cpp_infer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    基于Python或C++预测引擎推理
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../deployment/mcp_server.html" class="md-nav__link">
         
   
@@ -1341,6 +1348,109 @@ You're not viewing the latest version.
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++ 本地部署
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            C++ 本地部署
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/cpp/OCR.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    通用 OCR 产线 C++ 本地部署 - Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/cpp/OCR_windows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    通用 OCR 产线 C++ 本地部署 - Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1356,6 +1466,8 @@ You're not viewing the latest version.
   
     
     
+      
+        
       
         
       
@@ -1708,6 +1820,29 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     文本识别模块
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_usage/chart_parsing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    图表解析模块
     
   </span>
   
@@ -3322,6 +3457,9 @@ You're not viewing the latest version.
 <p>PP-DocTranslation 是飞桨提供的文档智能翻译解决方案，融合了先进的通用版面解析技术与大语言模型（LLM）能力，为您提供高效的文档智能翻译服务。该解决方案能够精准识别并提取文档中的各类元素，包括文本块、标题、段落、图片、表格及其他复杂版面结构，并在此基础之上实现高质量的多语种互译。PP-DocTranslation 支持多种主流语言间的相互翻译，尤其擅长处理排版复杂、上下文依赖性强的文档场景，力求输出精准自然、流畅专业的翻译结果。本产线同时提供了灵活的服务化部署方式，支持在多种硬件上使用多种编程语言调用。不仅如此，本产线也提供了二次开发的能力，您可以基于本产线在您自己的数据集上训练调优，训练后的模型也可以无缝集成。</p>
 <p><b>PP-DocTranslation 产线中使用了 PP-StructureV3 子产线，因此具有 PP-StructureV3 产线的所有功能，更多关于 PP-StructureV3 产线的功能介绍和使用细节，可以点击 <a href="PP-StructureV3.html">PP-StructureV3 产线文档</a> 页面查看</b>。</p>
 <p>在本产线中，您可以根据下方的基准测试数据选择使用的模型。</p>
+<blockquote>
+<p>推理耗时仅包含模型推理耗时，不包含前后处理耗时。</p>
+</blockquote>
 <details><summary> 👉模型列表详情</summary>
 <p><b>文档图像方向分类模块：</b></p>
 <table>
@@ -3985,7 +4123,7 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 </details>
 
 <h2 id="2">2. 快速开始<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>在本地使用 PP-DocTranslation 产线前，请确保您已经按照<a href="../installation.html">安装教程</a>完成了wheel包安装。</p>
+<p>在本地使用 PP-DocTranslation 产线前，请确保您已经按照<a href="../installation.html">安装教程</a>完成了wheel包安装。如果您希望选择性安装依赖，请参考安装教程中的相关说明。该产线对应的依赖分组为 <code>trans</code>。</p>
 <p><strong>请注意，如果在执行过程中遇到程序失去响应、程序异常退出、内存资源耗尽、推理速度极慢等问题，请尝试参考文档调整配置，例如关闭不需要使用的功能或使用更轻量的模型。</strong></p>
 <p>使用前需准备大语言模型的API密钥，支持<a href="https://console.bce.baidu.com/qianfan/ais/console/onlineService">百度云千帆平台</a>或符合OpenAI接口标准的本地大模型服务。</p>
 <h3 id="21">2.1 命令行方式体验<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
@@ -5433,11 +5571,8 @@ MKL-DNN 缓存容量。
         - `block_bbox`: `(np.ndarray)` 版面区域的边界框。
         - `block_label`: `(str)` 版面区域的标签，例如`text`, `table`等。
         - `block_content`: `(str)` 内容为版面区域内的内容。
-        - `seg_start_flag`: `(bool)` 标识该版面区域是否是段落的开始。
-        - `seg_end_flag`: `(bool)` 标识该版面区域是否是段落的结束。
-        - `sub_label`: `(str)` 版面区域的子标签，例如`text`的子标签可能为`title_text`。
-        - `sub_index`: `(int)` 版面区域的子索引，用于恢复Markdown。
-        - `index`: `(int)` 版面区域的索引，用于显示版面排序结果。
+        - `block_id`: `(int)` 版面区域的索引，用于显示版面排序结果。
+        - `block_order` `(int)` 版面区域的顺序，用于显示版面阅读顺序,对于非排序部分，默认值为 `None`。
 
 
     - `overall_ocr_res`: `(Dict[str, Union[List[str], List[float], numpy.ndarray]])` 全局 OCR 结果的字典
@@ -5660,6 +5795,7 @@ MKL-DNN 缓存容量。
 <ul>
 <li>请求体的属性如下：</li>
 </ul>
+
 <table>
 <thead>
 <tr>
@@ -5912,6 +6048,7 @@ MKL-DNN 缓存容量。
 </table>
 <p><code>layoutParsingResults</code>中的每个元素为一个<code>object</code>，具有如下属性：</p>
 <table>
+
 <thead>
 <tr>
 <th>名称</th>
@@ -6310,7 +6447,7 @@ for i, res in enumerate(result_translate["translationResults"]):
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月29日 06:29:48 UTC">2025年7月29日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年8月28日 03:34:30 UTC">2025年8月28日</span>
   </span>
 
     
@@ -6320,7 +6457,7 @@ for i, res in enumerate(result_translate["translationResults"]):
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月29日 06:29:48 UTC">2025年7月29日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年8月28日 03:34:30 UTC">2025年8月28日</span>
   </span>
 
     
@@ -6453,7 +6590,8 @@ for i, res in enumerate(result_translate["translationResults"]):
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
@@ -6491,10 +6629,10 @@ for i, res in enumerate(result_translate["translationResults"]):
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../javascripts/katex.min.js"></script>
       

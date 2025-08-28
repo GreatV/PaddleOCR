@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../version2.x/static/images/logo.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -39,39 +39,63 @@
   
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
   
@@ -82,21 +106,27 @@
   
   
     
-    
       
-    
+      
+        
+      
+      
     
   
     
-    
       
-    
+      
+        
+      
+      
     
   
     
-    
       
-    
+      
+        
+      
+      
     
   
   
@@ -1418,29 +1448,6 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../deployment/python_and_cpp_infer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    基于Python或C++预测引擎推理
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../deployment/mcp_server.html" class="md-nav__link">
         
   
@@ -1503,6 +1510,109 @@ You're not viewing the latest version.
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++ 本地部署
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            C++ 本地部署
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/cpp/OCR.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    通用 OCR 产线 C++ 本地部署 - Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/cpp/OCR_windows.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    通用 OCR 产线 C++ 本地部署 - Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1518,6 +1628,8 @@ You're not viewing the latest version.
   
     
     
+      
+        
       
         
       
@@ -1870,6 +1982,29 @@ You're not viewing the latest version.
   
   <span class="md-ellipsis">
     文本识别模块
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_usage/chart_parsing.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    图表解析模块
     
   </span>
   
@@ -3397,6 +3532,9 @@ You're not viewing the latest version.
 <li><a href="../module_usage/text_recognition.html">文本识别模块</a></li>
 </ul>
 <p>在本产线中，您可以根据下方的基准测试数据选择使用的模型。</p>
+<blockquote>
+<p>推理耗时仅包含模型推理耗时，不包含前后处理耗时。</p>
+</blockquote>
 <details>
 <summary><b>文档图像方向分类模块（可选）：</b></summary>
 <table>
@@ -3760,6 +3898,16 @@ SVTRv2 是一种由复旦大学视觉与学习实验室（FVL）的OpenOCR团队
 <th>介绍</th>
 </tr>
 <tr>
+<td>en_PP-OCRv5_mobile_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/\
+en_PP-OCRv5_mobile_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/en_PP-OCRv5_mobile_rec_pretrained.pdparams">训练模型</a></td>
+<td> 85.25</td>
+<td>-</td>
+<td>-</td>
+<td>7.5</td>
+<td>基于PP-OCRv5识别模型训练得到的超轻量级英文识别模型，进一步提升英文文本的识别准确率，优化空格漏识别的问题，并提高对手写英文文本的识别效果。</td>
+</tr>
+<tr>
 <td>en_PP-OCRv4_mobile_rec</td>
 <td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/\
 en_PP-OCRv4_mobile_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/en_PP-OCRv4_mobile_rec_pretrained.pdparams">训练模型</a></td>
@@ -3821,6 +3969,26 @@ eslav_PP-OCRv5_mobile_rec_infer.tar">推理模型</a>/<a href="https://paddle-mo
 <td>21.20 / 5.32</td>
 <td>14</td>
 <td>基于PP-OCRv5识别模型训练得到的东斯拉夫语言识别模型， 支持东斯拉夫语言、英文和数字识别</td>
+</tr>
+<tr>
+<td>th_PP-OCRv5_mobile_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/\
+th_PP-OCRv5_mobile_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/th_PP-OCRv5_mobile_rec_pretrained.pdparams">训练模型</a></td>
+<td>82.68</td>
+<td>-</td>
+<td>-</td>
+<td>7.5</td>
+<td>基于PP-OCRv5识别模型训练得到的泰语识别模型， 支持泰语、英文和数字识别</td>
+</tr>
+<tr>
+<td>el_PP-OCRv5_mobile_rec</td>
+<td><a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/\
+el_PP-OCRv5_mobile_rec_infer.tar">推理模型</a>/<a href="https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/el_PP-OCRv5_mobile_rec_pretrained.pdparams">训练模型</a></td>
+<td>89.28</td>
+<td>-</td>
+<td>-</td>
+<td>7.5</td>
+<td>基于PP-OCRv5识别模型训练得到的希腊语识别模型， 支持希腊语、英文和数字识别</td>
 </tr>
 <tr>
 <td>korean_PP-OCRv3_mobile_rec</td>
@@ -4173,6 +4341,11 @@ devanagari_PP-OCRv3_mobile_rec_infer.tar">推理模型</a>/<a href="https://padd
 </td>
 <td><code>float</code></td>
 <td></td>
+</tr>
+<tr>
+<td><code>return_word_box</code></td>
+<td>如果不设置，将使用产线初始化的该参数值，默认初始化为<code>False</code>。</td>
+<td><code>bool</code></td>
 </tr>
 <tr>
 <td><code>text_rec_input_shape</code></td>
@@ -5620,102 +5793,102 @@ foreach ($result as $i => $item) {
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCR</span><span class="p">(</span><span class="n">paddlex_config</span><span class="o">=</span><span class="s2">&quot;PaddleOCR.yaml&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="5">5. 附录<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<details><summary><b>Supported Languages</b></summary>
+<details><summary><b>支持语言</b></summary>
 
 <table border="1" cellspacing="0" cellpadding="4">
   <thead>
     <tr>
       <th><code>lang</code></th>
-      <th>Language Name</th>
+      <th>语言名称</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td><code>abq</code></td><td>Abaza</td></tr>
-    <tr><td><code>af</code></td><td>Afrikaans</td></tr>
-    <tr><td><code>ang</code></td><td>Old English</td></tr>
-    <tr><td><code>ar</code></td><td>Arabic</td></tr>
-    <tr><td><code>ava</code></td><td>Avaric</td></tr>
-    <tr><td><code>az</code></td><td>Azerbaijani</td></tr>
-    <tr><td><code>be</code></td><td>Belarusian</td></tr>
-    <tr><td><code>bg</code></td><td>Bulgarian</td></tr>
-    <tr><td><code>bgc</code></td><td>Haryanvi</td></tr>
-    <tr><td><code>bh</code></td><td>Bihari</td></tr>
-    <tr><td><code>bho</code></td><td>Bhojpuri</td></tr>
-    <tr><td><code>bs</code></td><td>Bosnian</td></tr>
-    <tr><td><code>ch</code></td><td>Chinese (Simplified)</td></tr>
-    <tr><td><code>che</code></td><td>Chechen</td></tr>
-    <tr><td><code>chinese_cht</code></td><td>Chinese (Traditional)</td></tr>
-    <tr><td><code>cs</code></td><td>Czech</td></tr>
-    <tr><td><code>cy</code></td><td>Welsh</td></tr>
-    <tr><td><code>da</code></td><td>Danish</td></tr>
-    <tr><td><code>dar</code></td><td>Dargwa</td></tr>
-    <tr><td><code>de</code> or <code>german</code></td><td>German</td></tr>
-    <tr><td><code>en</code></td><td>English</td></tr>
-    <tr><td><code>es</code></td><td>Spanish</td></tr>
-    <tr><td><code>et</code></td><td>Estonian</td></tr>
-    <tr><td><code>fa</code></td><td>Persian</td></tr>
-    <tr><td><code>fr</code> or <code>french</code></td><td>French</td></tr>
-    <tr><td><code>ga</code></td><td>Irish</td></tr>
-    <tr><td><code>gom</code></td><td>Konkani</td></tr>
-    <tr><td><code>hi</code></td><td>Hindi</td></tr>
-    <tr><td><code>hr</code></td><td>Croatian</td></tr>
-    <tr><td><code>hu</code></td><td>Hungarian</td></tr>
-    <tr><td><code>id</code></td><td>Indonesian</td></tr>
-    <tr><td><code>inh</code></td><td>Ingush</td></tr>
-    <tr><td><code>is</code></td><td>Icelandic</td></tr>
-    <tr><td><code>it</code></td><td>Italian</td></tr>
-    <tr><td><code>japan</code></td><td>Japanese</td></tr>
-    <tr><td><code>ka</code></td><td>Georgian</td></tr>
-    <tr><td><code>kbd</code></td><td>Kabardian</td></tr>
-    <tr><td><code>korean</code></td><td>Korean</td></tr>
-    <tr><td><code>ku</code></td><td>Kurdish</td></tr>
-    <tr><td><code>la</code></td><td>Latin</td></tr>
-    <tr><td><code>lbe</code></td><td>Lak</td></tr>
-    <tr><td><code>lez</code></td><td>Lezghian</td></tr>
-    <tr><td><code>lt</code></td><td>Lithuanian</td></tr>
-    <tr><td><code>lv</code></td><td>Latvian</td></tr>
-    <tr><td><code>mah</code></td><td>Magahi</td></tr>
-    <tr><td><code>mai</code></td><td>Maithili</td></tr>
-    <tr><td><code>mi</code></td><td>Maori</td></tr>
-    <tr><td><code>mn</code></td><td>Mongolian</td></tr>
-    <tr><td><code>mr</code></td><td>Marathi</td></tr>
-    <tr><td><code>ms</code></td><td>Malay</td></tr>
-    <tr><td><code>mt</code></td><td>Maltese</td></tr>
-    <tr><td><code>ne</code></td><td>Nepali</td></tr>
-    <tr><td><code>new</code></td><td>Newari</td></tr>
-    <tr><td><code>nl</code></td><td>Dutch</td></tr>
-    <tr><td><code>no</code></td><td>Norwegian</td></tr>
-    <tr><td><code>oc</code></td><td>Occitan</td></tr>
-    <tr><td><code>pi</code></td><td>Pali</td></tr>
-    <tr><td><code>pl</code></td><td>Polish</td></tr>
-    <tr><td><code>pt</code></td><td>Portuguese</td></tr>
-    <tr><td><code>ro</code></td><td>Romanian</td></tr>
-    <tr><td><code>rs_cyrillic</code></td><td>Serbian (Cyrillic)</td></tr>
-    <tr><td><code>rs_latin</code></td><td>Serbian (Latin)</td></tr>
-    <tr><td><code>ru</code></td><td>Russian</td></tr>
-    <tr><td><code>sa</code></td><td>Sanskrit</td></tr>
-    <tr><td><code>sck</code></td><td>Sadri</td></tr>
-    <tr><td><code>sk</code></td><td>Slovak</td></tr>
-    <tr><td><code>sl</code></td><td>Slovenian</td></tr>
-    <tr><td><code>sq</code></td><td>Albanian</td></tr>
-    <tr><td><code>sv</code></td><td>Swedish</td></tr>
-    <tr><td><code>sw</code></td><td>Swahili</td></tr>
-    <tr><td><code>tab</code></td><td>Tabassaran</td></tr>
-    <tr><td><code>ta</code></td><td>Tamil</td></tr>
-    <tr><td><code>te</code></td><td>Telugu</td></tr>
-    <tr><td><code>tl</code></td><td>Tagalog</td></tr>
-    <tr><td><code>tr</code></td><td>Turkish</td></tr>
-    <tr><td><code>ug</code></td><td>Uyghur</td></tr>
-    <tr><td><code>uk</code></td><td>Ukrainian</td></tr>
-    <tr><td><code>ur</code></td><td>Urdu</td></tr>
-    <tr><td><code>uz</code></td><td>Uzbek</td></tr>
-    <tr><td><code>vi</code></td><td>Vietnamese</td></tr>
+    <tr><td><code>abq</code></td><td>阿布哈兹文</td></tr>
+    <tr><td><code>af</code></td><td>南非荷兰文</td></tr>
+    <tr><td><code>ang</code></td><td>古英文</td></tr>
+    <tr><td><code>ar</code></td><td>阿拉伯文</td></tr>
+    <tr><td><code>ava</code></td><td>阿瓦尔文</td></tr>
+    <tr><td><code>az</code></td><td>阿塞拜疆文</td></tr>
+    <tr><td><code>be</code></td><td>白俄罗斯文</td></tr>
+    <tr><td><code>bg</code></td><td>保加利亚文</td></tr>
+    <tr><td><code>bgc</code></td><td>哈里亚纳文</td></tr>
+    <tr><td><code>bh</code></td><td>比哈尔文</td></tr>
+    <tr><td><code>bho</code></td><td>博杰普尔文</td></tr>
+    <tr><td><code>bs</code></td><td>波斯尼亚文</td></tr>
+    <tr><td><code>ch</code></td><td>简体中文</td></tr>
+    <tr><td><code>che</code></td><td>车臣文</td></tr>
+    <tr><td><code>chinese_cht</code></td><td>繁体中文</td></tr>
+    <tr><td><code>cs</code></td><td>捷克文</td></tr>
+    <tr><td><code>cy</code></td><td>威尔士文</td></tr>
+    <tr><td><code>da</code></td><td>丹麦文</td></tr>
+    <tr><td><code>dar</code></td><td>达尔格瓦文</td></tr>
+    <tr><td><code>de</code> or <code>german</code></td><td>德文</td></tr>
+    <tr><td><code>en</code></td><td>英文</td></tr>
+    <tr><td><code>es</code></td><td>西班牙文</td></tr>
+    <tr><td><code>et</code></td><td>爱沙尼亚文</td></tr>
+    <tr><td><code>fa</code></td><td>波斯文</td></tr>
+    <tr><td><code>fr</code> or <code>french</code></td><td>法文</td></tr>
+    <tr><td><code>ga</code></td><td>爱尔兰文</td></tr>
+    <tr><td><code>gom</code></td><td>孔卡尼文</td></tr>
+    <tr><td><code>hi</code></td><td>印地文</td></tr>
+    <tr><td><code>hr</code></td><td>克罗地亚文</td></tr>
+    <tr><td><code>hu</code></td><td>匈牙利文</td></tr>
+    <tr><td><code>id</code></td><td>印尼文</td></tr>
+    <tr><td><code>inh</code></td><td>印古什文</td></tr>
+    <tr><td><code>is</code></td><td>冰岛文</td></tr>
+    <tr><td><code>it</code></td><td>意大利文</td></tr>
+    <tr><td><code>japan</code></td><td>日文</td></tr>
+    <tr><td><code>ka</code></td><td>格鲁吉亚文</td></tr>
+    <tr><td><code>kbd</code></td><td>卡巴尔达文</td></tr>
+    <tr><td><code>korean</code></td><td>韩文</td></tr>
+    <tr><td><code>ku</code></td><td>库尔德文</td></tr>
+    <tr><td><code>la</code></td><td>拉丁文</td></tr>
+    <tr><td><code>lbe</code></td><td>拉克文</td></tr>
+    <tr><td><code>lez</code></td><td>列兹金文</td></tr>
+    <tr><td><code>lt</code></td><td>立陶宛文</td></tr>
+    <tr><td><code>lv</code></td><td>拉脱维亚文</td></tr>
+    <tr><td><code>mah</code></td><td>马加希文</td></tr>
+    <tr><td><code>mai</code></td><td>迈蒂利文</td></tr>
+    <tr><td><code>mi</code></td><td>毛利文</td></tr>
+    <tr><td><code>mn</code></td><td>蒙古文</td></tr>
+    <tr><td><code>mr</code></td><td>马拉地文</td></tr>
+    <tr><td><code>ms</code></td><td>马来文</td></tr>
+    <tr><td><code>mt</code></td><td>马耳他文</td></tr>
+    <tr><td><code>ne</code></td><td>尼泊尔文</td></tr>
+    <tr><td><code>new</code></td><td>尼瓦尔文</td></tr>
+    <tr><td><code>nl</code></td><td>荷兰文</td></tr>
+    <tr><td><code>no</code></td><td>挪威文</td></tr>
+    <tr><td><code>oc</code></td><td>奥克文</td></tr>
+    <tr><td><code>pi</code></td><td>巴利文</td></tr>
+    <tr><td><code>pl</code></td><td>波兰文</td></tr>
+    <tr><td><code>pt</code></td><td>葡萄牙文</td></tr>
+    <tr><td><code>ro</code></td><td>罗马尼亚文</td></tr>
+    <tr><td><code>rs_cyrillic</code></td><td>塞尔维亚语西里尔字母</td></tr>
+    <tr><td><code>rs_latin</code></td><td>塞尔维亚语拉丁字母</td></tr>
+    <tr><td><code>ru</code></td><td>俄文</td></tr>
+    <tr><td><code>sa</code></td><td>梵文</td></tr>
+    <tr><td><code>sck</code></td><td>萨达里文</td></tr>
+    <tr><td><code>sk</code></td><td>斯洛伐克文</td></tr>
+    <tr><td><code>sl</code></td><td>斯洛文尼亚文</td></tr>
+    <tr><td><code>sq</code></td><td>阿尔巴尼亚文</td></tr>
+    <tr><td><code>sv</code></td><td>瑞典文</td></tr>
+    <tr><td><code>sw</code></td><td>斯瓦希里文</td></tr>
+    <tr><td><code>tab</code></td><td>塔巴萨兰文</td></tr>
+    <tr><td><code>ta</code></td><td>泰米尔文</td></tr>
+    <tr><td><code>te</code></td><td>泰卢固文</td></tr>
+    <tr><td><code>tl</code></td><td>塔加洛文</td></tr>
+    <tr><td><code>tr</code></td><td>土耳其文</td></tr>
+    <tr><td><code>ug</code></td><td>维吾尔文</td></tr>
+    <tr><td><code>uk</code></td><td>乌克兰文</td></tr>
+    <tr><td><code>ur</code></td><td>乌尔都文</td></tr>
+    <tr><td><code>uz</code></td><td>乌兹别克文</td></tr>
+    <tr><td><code>vi</code></td><td>越南文</td></tr>
   </tbody>
 </table>
 
 </details>
 
-<details><summary><b>Correspondence Between OCR Model Versions and Supported Languages</b></summary>
+<details><summary><b>OCR模型版本与支持语言的对应关系</b></summary>
 
 <table border="1" cellspacing="0" cellpadding="4">
   <thead>
@@ -5775,7 +5948,7 @@ foreach ($result as $i => $item) {
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月29日 06:29:48 UTC">2025年7月29日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年8月28日 03:34:30 UTC">2025年8月28日</span>
   </span>
 
     
@@ -5785,7 +5958,7 @@ foreach ($result as $i => $item) {
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年7月29日 06:29:48 UTC">2025年7月29日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年8月28日 03:34:30 UTC">2025年8月28日</span>
   </span>
 
     
@@ -5918,7 +6091,8 @@ foreach ($result as $i => $item) {
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
@@ -5956,10 +6130,10 @@ foreach ($result as $i => $item) {
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.tooltips", "content.code.copy", "content.tabs.link", "content.footnote.tooltips", "content.action.edit", "content.action.view", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
         <script src="../../javascripts/katex.min.js"></script>
       
